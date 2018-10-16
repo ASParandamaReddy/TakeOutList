@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="kmrs.merchant.app" version="2.2" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Karenderia Order Taking App</name>
+    <description>
+        Karenderia Order Taking App
+    </description>
+    <author email="bastikikang@gmail.com" href="http://cordova.io">
+        bastisapp.com
+    </author>
+    <icon src="icon.png" />
+    <content src="index.html" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="phonegap-plugin-push" source="npm" spec="1.11.1" />
+    <gap:plugin name="cordova-plugin-device" source="npm" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+    <gap:plugin name="cordova-plugin-geolocation" source="npm" />
+    <gap:plugin name="cordova-plugin-network-information" source="npm" />
+    <gap:splash src="splash.png" />
+    <gap:plugin name="cordova-plugin-googlemaps-plus" source="npm">
+        <param name="API_KEY_FOR_ANDROID" value="" />
+        <param name="API_KEY_FOR_IOS" value="" />
+        <param name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="Karenderia wants to use your location" />
+        <param name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="Karenderia want to always use your location" />
+    </gap:plugin>
+    <gap:plugin name="cordova-plugin-media" source="npm" spec="3.0.0" />
+    <gap:plugin name="cordova-plugin-x-toast" source="npm" spec="2.6.0" />
+    <gap:plugin name="cordova-plugin-buildinfo" source="npm" spec="1.1.0" />
+    <access origin="*" />
+    <access launch-external="yes" origin="tel:*" />
+    <gap:config-file parent="/manifest" platform="android">
+        <supports-screens android:largeScreens="true" android:smallScreens="true" android:xlargeScreens="true" />
+        <application android:theme="@android:style/Theme.NoTitleBar">
+        </application>
+    </gap:config-file>
+    <gap:plugin name="cordova.plugins.diagnostic" source="npm" spec="3.7.1" />
+    <preference name="orientation" value="portrait" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="phonegap-version" value="cli-7.0.1" />
+    <preference name="android-minSdkVersion" value="17" />
+    <preference name="android-targetSdkVersion" value="26" />
+</widget>
